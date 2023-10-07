@@ -2,7 +2,7 @@
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className="bg-gray-50 p-14">
              <div className='text-center my-14'>
                 <h2 className='w-2/3 mx-auto text-6xl font-semibold'><span className='text-orange-400'>Hello!!</span> <br /> We Are an Event Planning Agency</h2>
                 <p className='my-10 w-2/3 mx-auto text-xl font-medium'>As the premier event planning company in This City, we know that Each event and client is unique and we believe our services should be as well. We promise that we will give you better experiance and memory as well.</p>

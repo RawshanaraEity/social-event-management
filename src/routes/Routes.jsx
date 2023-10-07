@@ -8,6 +8,7 @@ import Gallery from "../pages/Gallery";
 import Login from "../pages/Login";
 import Services from "../pages/Services";
 import ServiceDetails from "../components/ServiceDetails";
+import Contact from "../components/Contact";
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         {
             path: '/gallery',
             element: <Gallery></Gallery>
+        },
+        {
+            path: '/contact',
+            element: <Contact></Contact>
         },
         {
             path: '/login',

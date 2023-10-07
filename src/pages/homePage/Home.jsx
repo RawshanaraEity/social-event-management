@@ -5,6 +5,7 @@ import ServicesCards from "../../components/ServicesCards";
 import AboutUs from "../../home/AboutUs";
 import NavBar from "../../home/NavBar";
 import GalleryCard from "../../components/GalleryCard";
+import Contact from "../../components/Contact";
 
 
 
@@ -16,9 +17,9 @@ const Home = () => {
         <div>
             <NavBar></NavBar>
             <Banner></Banner>
-            <ServicesCards services={allData}></ServicesCards>
             <AboutUs></AboutUs>
-           
+            <ServicesCards services={allData}></ServicesCards>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );

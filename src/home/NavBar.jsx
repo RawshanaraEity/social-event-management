@@ -16,13 +16,16 @@ const NavBar = () => {
         <li className="text-base font-medium"> <NavLink to='/gallery' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-amber-500 text-white" : ""
               }>Gallery</NavLink></li>
+        <li className="text-base font-medium"> <NavLink to='/contact' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "bg-amber-500 text-white" : ""
+              }>Contact</NavLink></li>
     </>
 
 
 
     return (
         <div>
-            <div className="navbar bg-base-100 py-6">
+            <div className="navbar bg-base-100 py-10">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
