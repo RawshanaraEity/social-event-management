@@ -1,41 +1,41 @@
 [
     {
-      "id": 1,
+      "id": "1",
       "title": "Wedding",
       "image": "https://i.ibb.co/N2mc5qv/wedding.jpg",
       "description": "A wedding is a joyous celebration of love and commitment between two people. It typically involves a ceremony where vows are exchanged, followed by a reception where guests gather to celebrate the newlyweds. Weddings are often highly personalized, reflecting the couple's unique style and cultural traditions. They can range from intimate gatherings to grand, lavish affairs, with elements like beautiful decorations, music, and exquisite cuisine.",
       "price": 1000
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Engagement parties",
       "image": "https://i.ibb.co/hRJzY9B/engagement.jpg",
       "description": "An engagement party is a pre-wedding celebration held to announce and celebrate a couple's engagement. It's an occasion for friends and family to congratulate the couple and often involves sharing the story of how the proposal happened. Engagement parties can be casual or formal events, with toasts, good food, and sometimes even games or activities to engage the guests.",
       "price": 800
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Anniversaries",
       "image": "https://i.ibb.co/djdbmX8/anniversary3.jpg",
       "description": "Anniversaries mark a significant milestone in a marriage, such as the first, fifth, or fiftieth year of togetherness. Couples celebrate their enduring love and commitment on these occasions. Anniversary celebrations can be intimate dinners, family gatherings, or large parties, often featuring speeches, renewing of vows, and the exchange of thoughtful gifts.",
       "price": 500
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Birthday parties",
       "image": "https://i.ibb.co/8b7PRqs/hbd.jpg",
       "description": "A birthday party is an event held to celebrate the anniversary of someone's birth. Birthday parties come in all shapes and sizes, from children's themed parties with games and cake to more sophisticated adult celebrations in restaurants or at home. There might be decorations, music, dancing, and, of course, a birthday cake with candles to make a wish upon.",
       "price": 1200
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Graduation parties",
       "image": "https://i.ibb.co/0fxDFLy/graduation.jpg",
       "description": "A graduation party is held to celebrate the completion of an academic degree or educational achievement. It's a time to acknowledge the graduate's hard work and accomplishments. Graduation parties can be formal or informal, often including speeches, presentations, and congratulatory gifts. They provide an opportunity for friends and family to gather and wish the graduate success in their future endeavors.",
       "price": 900
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Bridal and Baby showers",
       "image": "https://i.ibb.co/CPT091L/bridal-shower.jpg",
       "description": "Bridal and baby showers are special parties to honor a bride-to-be or an expectant mother, respectively. Bridal showers are typically organized by friends or family members of the bride and involve games, gifts, and advice for the upcoming marriage. Baby showers, on the other hand, celebrate the imminent arrival of a new baby and often involve gifts, games, and activities centered around the baby's future.",

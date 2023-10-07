@@ -1,3 +1,4 @@
+import GalleryCard from "../components/GalleryCard";
 import NavBar from "../home/NavBar";
 
 
@@ -5,7 +6,10 @@ const Gallery = () => {
     return (
         <div>
             <NavBar></NavBar>
-            gallery
+            <div className='bg-gray-200 p-7'>
+                <h2 className='text-xl text-slate-500 font-bold'>Gallery</h2>
+            </div>
+           <GalleryCard></GalleryCard>
         </div>
     );
 };

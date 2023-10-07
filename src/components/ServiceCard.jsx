@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const ServiceCard = ({ service }) => {
@@ -19,7 +20,7 @@ const ServiceCard = ({ service }) => {
             
           <div className="card-actions justify-end mt-5">
           <p className="font-bold text-lg">Price: ${price}</p>
-            <button className="btn bg-amber-500 text-lg font-semibold capitalize text-white">Show Details</button>
+           <Link to={`/service/${id}`}> <button className="btn bg-amber-500 text-lg font-semibold capitalize text-white">Show Details</button></Link>
           </div>
         </div>
       </div>

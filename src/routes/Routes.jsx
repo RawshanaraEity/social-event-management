@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Gallery from "../pages/Gallery";
 import Login from "../pages/Login";
 import Services from "../pages/Services";
+import ServiceDetails from "../components/ServiceDetails";
 
 
 
@@ -27,7 +28,13 @@ const router = createBrowserRouter([
         },
         {
             path: '/services',
-            element: <Services></Services>
+            element: <Services></Services>,
+            loader: () => fetch('/data.json')
+        },
+        {
+            path: '/service/:id',
+            element: <ServiceDetails></ServiceDetails>,
+            loader: () => fetch('/data.json')
         },
         {
             path: '/gallery',
