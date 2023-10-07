@@ -17,7 +17,7 @@ const Banner = () => {
             <p className="mb-5">
                 Planning a Wedding,Birthday Parties,Engagement or any other events in our busy city is not so easy.Thats why we are here to help you make it easy and more attractive.
             </p>
-            <button className="btn btn-warning text-white">Get Started</button>
+            <button className="btn bg-amber-500 border-none text-white">Get Started</button>
           </div>
         </div>
       </div>

@@ -4,16 +4,16 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = () => {
 
     const navLinks = <>
-        <li> <NavLink to='/' className={({ isActive, isPending }) =>
+        <li className="text-base font-medium"> <NavLink to='/' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-amber-500 text-white" : ""
               }>Home</NavLink></li>
-        <li> <NavLink to='/about' className={({ isActive, isPending }) =>
+        <li className="text-base font-medium"> <NavLink to='/about' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-amber-500 text-white" : ""
               }>About</NavLink></li>
-        <li> <NavLink to='/services' className={({ isActive, isPending }) =>
+        <li className="text-base font-medium"> <NavLink to='/services' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-amber-500 text-white" : ""
               }>Services</NavLink></li>
-        <li> <NavLink to='/gallery' className={({ isActive, isPending }) =>
+        <li className="text-base font-medium"> <NavLink to='/gallery' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-amber-500 text-white" : ""
               }>Gallery</NavLink></li>
     </>
@@ -40,7 +40,7 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to='/login'><button className="btn btn-warning text-white ">Login</button></Link>
+    <Link to='/login'><button className="btn bg-amber-500 text-white ">Login</button></Link>
   </div>
 </div>
         </div>
