@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavBar from "../home/NavBar";
 import { Link } from "react-router-dom";
+import SocialLogin from "../components/SocialLogin";
+import useAuth from "../hooks/useAuth";
+
 
 const Register = () => {
+    const {createUser} = useAuth()
+
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const photo = e.target.photo.value;
+        const password = e.target.password.value;
+        console.log(email,name,password,photo)
+    }
+
   return (
     <div>
       <div>
@@ -10,7 +24,7 @@ const Register = () => {
         <div>
           <h2 className="text-3xl my-5 text-center">Please Register</h2>
 
-          <form className="md:w-3/4 lg:w-1/3 mx-auto">
+          <form onSubmit={handleSubmit} className="md:w-3/4 lg:w-1/3 mx-auto">
           <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -65,7 +79,7 @@ const Register = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+              <button className="btn bg-amber-500 text-white" type="submit">Register</button>
             </div>
           </form>
           <p className="text-center mt-4">
@@ -79,6 +93,7 @@ const Register = () => {
           </p>
         </div>
       </div>
+      <div className="flex justify-center"> <SocialLogin></SocialLogin></div>
     </div>
   );
 };
