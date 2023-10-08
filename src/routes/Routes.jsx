@@ -8,8 +8,9 @@ import Gallery from "../pages/Gallery";
 import Login from "../pages/Login";
 import Services from "../pages/Services";
 import ServiceDetails from "../components/ServiceDetails";
-import Contact from "../components/Contact";
 import Register from "../pages/Register";
+import PrivateRoute from "../privateRoute/PrivateRoute";
+import Contact from "../components/Contact";
 
 
 
@@ -30,17 +31,23 @@ const router = createBrowserRouter([
         },
         {
             path: '/services',
-            element: <Services></Services>,
+            element: <PrivateRoute>
+                <Services></Services>
+                </PrivateRoute>,
             loader: () => fetch('/data.json')
         },
         {
             path: '/service/:id',
-            element: <ServiceDetails></ServiceDetails>,
+            element: <PrivateRoute>
+                <ServiceDetails></ServiceDetails>
+                </PrivateRoute>,
             loader: () => fetch('/data.json')
         },
         {
             path: '/gallery',
-            element: <Gallery></Gallery>
+            element: <PrivateRoute>
+                <Gallery></Gallery>
+            </PrivateRoute>
         },
         {
             path: '/contact',

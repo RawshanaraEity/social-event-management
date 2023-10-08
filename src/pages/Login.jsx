@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../home/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
 import useAuth from "../hooks/useAuth";
 import swal from "sweetalert";
@@ -8,6 +8,8 @@ import swal from "sweetalert";
 const Login = () => {
 
     const {signIn} = useAuth();
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const handleLogIn = (e) =>{
         e.preventDefault()
@@ -23,7 +25,10 @@ const Login = () => {
         else{
             // create user
         signIn(email,password)
-        .then(result => console.log(result.user))
+        .then(result => {
+
+            navigate(location?.state? location.state : '/')
+        })
         .catch(error => console.log(error))
         swal("Wow","Successfully login", "success");
         }
