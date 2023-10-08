@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import NavBar from "../home/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
 import useAuth from "../hooks/useAuth";
 import swal from 'sweetalert';
@@ -8,6 +8,7 @@ import swal from 'sweetalert';
 
 const Register = () => {
     const {createUser} = useAuth()
+    const navigate = useNavigate()
 
     const handleRegister = (e) =>{
         e.preventDefault()
@@ -19,13 +20,16 @@ const Register = () => {
 
         // validation
         if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{6,}$/.test(password)){
-            swal("Oops!", "Something went wrong!", "error");
+            swal("Oops!", "Plz type Minimum six characters, at least one capital letter and one special charecter", "error");
         }
 
         else{
             // create user
         createUser(email,password)
-        .then(result => console.log(result.user))
+        .then(result => {
+            navigate('/')
+            console.log(result.user)
+        })
         .catch(error => console.log(error))
         swal("Wow","Successfully Registered", "success");
         }

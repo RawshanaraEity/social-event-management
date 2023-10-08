@@ -18,8 +18,8 @@ const Login = () => {
         console.log(email,password)
 
         // validation
-        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{6,}$/.test(password)){
-            swal("Oops!", "Something went wrong!", "error");
+        if(!password){
+            swal("Oops!", "Plz type Minimum six characters, at least one capital letter and one special charecter", "error");
         }
 
         else{
@@ -28,9 +28,10 @@ const Login = () => {
         .then(result => {
 
             navigate(location?.state? location.state : '/')
+            swal("Wow","Successfully login", "success");
         })
         .catch(error => console.log(error))
-        swal("Wow","Successfully login", "success");
+        
         }
 
     }
