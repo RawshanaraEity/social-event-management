@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import Services from "../pages/Services";
 import ServiceDetails from "../components/ServiceDetails";
 import Contact from "../components/Contact";
+import Register from "../pages/Register";
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         {
             path: '/login',
             element: <Login></Login>
+        },
+        {
+            path: '/register',
+            element: <Register></Register>
         }
       ]
     }
