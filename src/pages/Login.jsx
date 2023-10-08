@@ -2,15 +2,41 @@ import React from "react";
 import NavBar from "../home/NavBar";
 import { Link } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
+import useAuth from "../hooks/useAuth";
+import swal from "sweetalert";
 
 const Login = () => {
+
+    const {signIn} = useAuth();
+
+    const handleLogIn = (e) =>{
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email,password)
+
+        // validation
+        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{6,}$/.test(password)){
+            swal("Oops!", "Something went wrong!", "error");
+        }
+
+        else{
+            // create user
+        signIn(email,password)
+        .then(result => console.log(result.user))
+        .catch(error => console.log(error))
+        swal("Wow","Successfully login", "success");
+        }
+
+    }
+
   return (
     <div>
         <NavBar></NavBar>
       <div>
         <h2 className="text-3xl my-10 text-center">Please login</h2>
 
-        <form className="md:w-3/4 lg:w-1/3 mx-auto">
+        <form onSubmit={handleLogIn} className="md:w-3/4 lg:w-1/3 mx-auto">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -41,7 +67,7 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-amber-500 text-white">Login</button>
+            <button className="btn bg-amber-500 text-white" type="submit">Login</button>
           </div>
         </form>
         <p className="text-center mt-4">

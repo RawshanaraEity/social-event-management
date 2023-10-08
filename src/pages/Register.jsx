@@ -3,19 +3,36 @@ import NavBar from "../home/NavBar";
 import { Link } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
 import useAuth from "../hooks/useAuth";
+import swal from 'sweetalert';
 
 
 const Register = () => {
     const {createUser} = useAuth()
 
-    const handleSubmit = (e) =>{
+    const handleRegister = (e) =>{
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
         const photo = e.target.photo.value;
         const password = e.target.password.value;
-        console.log(email,name,password,photo)
+        // console.log(email,name,password,photo)
+
+        // validation
+        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{6,}$/.test(password)){
+            swal("Oops!", "Something went wrong!", "error");
+        }
+
+        else{
+            // create user
+        createUser(email,password)
+        .then(result => console.log(result.user))
+        .catch(error => console.log(error))
+        swal("Wow","Successfully Registered", "success");
+        }
+
+        
     }
+
 
   return (
     <div>
@@ -24,7 +41,7 @@ const Register = () => {
         <div>
           <h2 className="text-3xl my-5 text-center">Please Register</h2>
 
-          <form onSubmit={handleSubmit} className="md:w-3/4 lg:w-1/3 mx-auto">
+          <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/3 mx-auto">
           <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -66,7 +83,7 @@ const Register = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type="text"
                 placeholder="password"
                 name="password"
                 className="input input-bordered"
