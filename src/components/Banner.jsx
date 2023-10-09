@@ -11,7 +11,7 @@ const Banner = () => {
         <div className="hero-overlay bg-opacity-40"></div>
         <div className="hero-content text-center text-white">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">
+            <h1 className="mb-5 text-4xl md:text-5xl font-bold">
              Let's Celebrate Your Special Moment With Us!!!
             </h1>
             <p className="mb-5">

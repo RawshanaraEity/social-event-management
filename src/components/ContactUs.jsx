@@ -6,7 +6,7 @@ import {PiNotePencilDuotone} from "react-icons/pi"
 const ContactUs = () => {
   return (
     <div className="bg-gray-50">
-      <h2 className="text-6xl text-center font-bold  pt-14">Contact Us</h2>
+      <h2 className="text-4xl md:text-6xl text-center font-bold  pt-14">Contact Us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-20 px-5">
         <div className="card bg-base-100 shadow-xl">
           <p className="text-4xl text-red-500 flex justify-center mt-8">

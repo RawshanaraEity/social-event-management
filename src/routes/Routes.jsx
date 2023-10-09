@@ -11,6 +11,7 @@ import ServiceDetails from "../components/ServiceDetails";
 import Register from "../pages/Register";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import Contact from "../components/Contact";
+import Prices from "../pages/Prices";
 
 
 
@@ -52,6 +53,12 @@ const router = createBrowserRouter([
         {
             path: '/contact',
             element: <Contact></Contact>
+        },
+        {
+            path: '/prices',
+            element: <PrivateRoute>
+                <Prices></Prices>
+            </PrivateRoute>
         },
         {
             path: '/login',

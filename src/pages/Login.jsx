@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../home/NavBar";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
@@ -6,6 +6,8 @@ import useAuth from "../hooks/useAuth";
 import swal from "sweetalert";
 
 const Login = () => {
+
+  const [error, setError] = useState('')
 
     const {signIn} = useAuth();
     const location = useLocation()
@@ -16,13 +18,7 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email,password)
-
-        // validation
-        if(!password){
-            swal("Oops!", "Plz type Minimum six characters, at least one capital letter and one special charecter", "error");
-        }
-
-        else{
+        
             // create user
         signIn(email,password)
         .then(result => {
@@ -30,9 +26,9 @@ const Login = () => {
             navigate(location?.state? location.state : '/')
             swal("Wow","Successfully login", "success");
         })
-        .catch(error => console.log(error))
+        .catch(error => setError(swal("Oops!", "Wrong Email / Password", "error")))
         
-        }
+        
 
     }
 
@@ -42,7 +38,7 @@ const Login = () => {
       <div>
         <h2 className="text-3xl my-10 text-center">Please login</h2>
 
-        <form onSubmit={handleLogIn} className="md:w-3/4 lg:w-1/3 mx-auto">
+        <form onSubmit={handleLogIn} className="md:w-3/4 lg:w-1/3 mx-auto px-5">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
