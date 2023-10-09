@@ -1,4 +1,21 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+import { useEffect } from 'react';
+
+
 const Banner = () => {
+
+  useEffect(() =>{
+    Aos.init(
+      {
+        duration: 1000, 
+      offset: 200,
+      } 
+    );
+  },[])
+
+
   return (
     <div>
       <div
@@ -10,7 +27,7 @@ const Banner = () => {
       >
         <div className="hero-overlay bg-opacity-40"></div>
         <div className="hero-content text-center text-white">
-          <div className="max-w-md">
+          <div className="max-w-md" data-aos="zoom-in-up" >
             <h1 className="mb-5 text-4xl md:text-5xl font-bold">
              Let's Celebrate Your Special Moment With Us!!!
             </h1>

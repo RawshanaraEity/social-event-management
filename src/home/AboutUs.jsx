@@ -1,9 +1,23 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
+import { useEffect } from 'react';
 
 const AboutUs = () => {
+
+    useEffect(() =>{
+        Aos.init(
+          {
+            duration: 1000, 
+          offset: 200,
+          } 
+        );
+      },[])
+
+
     return (
         <div className="bg-gray-50 p-8 md:p-14">
-             <div className='text-center'>
+             <div className='text-center' data-aos="fade-up-left">
                 <h1 className="text-5xl md:text-6xl font-bold mb-10">About Us</h1>
                <div className="bg-white shadow-xl rounded-lg py-8 md:py-14">
                <h2 className='w-full md:w-2/3 mx-auto text-4xl font-semibold'><span className='text-orange-400'>Hello!!</span> <br /> We Are an Event Planning Agency</h2>

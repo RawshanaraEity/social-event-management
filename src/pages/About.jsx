@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../home/NavBar';
 import AboutUs from '../home/AboutUs';
+import Footer from '../components/Footer';
 
 const About = () => {
     return (
@@ -10,6 +11,8 @@ const About = () => {
                 <h2 className='text-xl text-slate-500 font-bold'>About Us</h2>
             </div>
            <AboutUs></AboutUs>
+           <Footer></Footer>
+
         </div>
     );
 };

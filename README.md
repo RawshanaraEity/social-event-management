@@ -1,8 +1,12 @@
-# React + Vite
+# Sparkle Events
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<!-- ## [Website live link](https://classroom.github.com/a/ehOGNGkI)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Click here for the projects live link: [https://classroom.github.com/a/ehOGNGkI](https://classroom.github.com/a/ehOGNGkI) -->
+
+* In our website we will provide you defferent types of event management services.
+* You can choose event plan and see the details about that event.
+* You can also see our event packages and its prices.
+* You can create your own account in our website.
+* After logged in you can booked us for your selected events.
