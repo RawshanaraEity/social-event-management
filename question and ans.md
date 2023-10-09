@@ -45,7 +45,7 @@ sum(1, "2");
 
 #### Answer: C
 
-<i>Correct ans is C because one value is a number and another is a string</i>
+<i>Correct ans is C because in javascript when we add a number and a string it converts the number to a string and then concatenates the two strings.</i>
 
 </p>
 </details>
