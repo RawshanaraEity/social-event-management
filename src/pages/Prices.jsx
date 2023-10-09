@@ -1,5 +1,7 @@
 import React from 'react';
 import NavBar from '../home/NavBar';
+import ContactUs from '../components/ContactUs';
+import Footer from '../components/Footer';
 
 const Prices = () => {
 
@@ -83,6 +85,8 @@ const Prices = () => {
         </div>
         </div>
        </div>
+       <ContactUs></ContactUs>
+       <Footer></Footer>
        </div>
     );
 };
