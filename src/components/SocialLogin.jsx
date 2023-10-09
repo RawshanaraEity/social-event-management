@@ -14,7 +14,6 @@ const SocialLogin = () => {
         googleLogin()
         .then(result => {
             navigate(location?.state? location.state : '/')
-            console.log(result.user)
         }
             )
         .catch(error => console.log(error))

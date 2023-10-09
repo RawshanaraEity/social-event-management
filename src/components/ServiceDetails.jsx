@@ -15,7 +15,6 @@ const ServiceDetails = () => {
         setNewData(findData)
     },[allData,id])
 
-console.log(newData)
     return (
         <div>
             <NavBar></NavBar>

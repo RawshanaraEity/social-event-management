@@ -28,7 +28,7 @@ const Register = () => {
         createUser(email,password)
         .then(result => {
             navigate('/')
-            console.log(result.user)
+            // console.log(result.user)
         })
         .catch(error => console.log(error))
         swal("Wow","Successfully Registered", "success");

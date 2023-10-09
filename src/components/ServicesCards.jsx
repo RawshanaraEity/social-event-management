@@ -1,5 +1,5 @@
 import ServiceCard from "./serviceCard";
-import Aos from 'aos';
+
 
 
 const ServicesCards = ({services}) => {

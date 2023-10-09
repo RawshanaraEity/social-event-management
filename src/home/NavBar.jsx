@@ -103,7 +103,7 @@ const NavBar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className=" normal-case text-3xl font-bold">
+          <a className="btn btn-ghost text-amber-500 normal-case text-4xl font-extrabold">
             Sparkle Events
           </a>
         </div>

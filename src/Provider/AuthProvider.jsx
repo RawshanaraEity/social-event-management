@@ -54,9 +54,6 @@ const logOut = () =>{
       }
   },[])
 
-  console.log(user)
-
-
 
 
   const info = {
